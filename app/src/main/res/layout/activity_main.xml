@@ -1,0 +1,106 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/GreenBg">
+
+    <TextView
+        android:id="@+id/balanceText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Balance: $1000"
+        android:textSize="18sp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:id="@+id/betAmount"
+        android:layout_width="266dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/balanceText"
+        android:layout_centerHorizontal="true"
+        android:hint="Enter the bet amount"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/allInButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/betAmount"
+        android:layout_marginStart="-60dp"
+        android:layout_marginTop="-3dp"
+        android:layout_toEndOf="@id/betAmount"
+        android:backgroundTint="@color/RedBg"
+        android:text="All In" />
+
+    <EditText
+        android:id="@+id/betChoice"
+        android:layout_width="269dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/betAmount"
+        android:layout_centerHorizontal="true"
+        android:hint="Enter a number to bet (0 - 36)"
+        android:inputType="number" />
+
+    <RadioGroup
+        android:id="@+id/colorChoiceGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/betChoice"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/greenOption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="green"
+            android:buttonTint="@android:color/holo_green_dark"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/redOption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="red"
+            android:buttonTint="@android:color/holo_red_dark"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/blackOption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="black"
+            android:buttonTint="@android:color/black"
+            android:textStyle="bold" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/spinButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Twist"
+        android:layout_below="@id/colorChoiceGroup"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="@color/RedBg"
+        android:layout_marginTop="16dp" />
+
+    <com.example.roulette.RouletteView
+        android:id="@+id/rouletteWheel"
+        android:layout_width="400dp"
+        android:layout_height="300dp"
+        android:layout_below="@id/spinButton"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/resultText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rouletteWheel"
+        android:layout_centerHorizontal="true"
+        android:text="Result: "
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp" />
+</RelativeLayout>

@@ -14,4 +14,4 @@
 
 | Main Screen | Game Screen |
 |-------------|------------|
-| ![Main Screen](main.jpg) | ![Bet Screen](game.jpg) |
+| ![Main Screen]() | ![Bet Screen]() |
